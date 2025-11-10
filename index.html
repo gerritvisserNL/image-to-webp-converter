@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image to WebP Converter</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Image → WebP Converter</h1>
+      <p class="subtext">
+        Drop a folder with images or select manually <br />
+        Supported formats: JPG, JPEG, PNG, GIF, BMP, AVIF
+      </p>
+
+      <label class="toggle">
+        <input type="checkbox" id="optimize" />
+        <span>Optimize file size</span>
+      </label>
+
+      <div id="dropzone">
+        <p>Drop your folder here</p>
+        <input type="file" id="fileInput" multiple webkitdirectory hidden />
+        <button id="selectBtn">Select Folder</button>
+      </div>
+
+      <div class="actions">
+        <button id="downloadZip" disabled>Download All as ZIP</button>
+      </div>
+
+      <div id="preview"></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
